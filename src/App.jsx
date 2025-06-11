@@ -56,7 +56,13 @@ const App = () => {
   const renderIntroScreen = () => (
     <div className="text-center py-16">
       <h2 className="title text-4xl font-bold mb-6 text-amber-400">The Mystery Begins</h2>
-      <p className="text-xl mb-4 max-w-2xl mx-auto">{gameData.story}</p>
+      <p className="text-xl mb-4 max-w-2xl mx-auto text-center">
+  Welcome to the collaborative detective game. Four detectives must work together to solve a mysterious crime by gathering clues and interrogating suspects.
+</p>
+<p className="text-xl mb-4 max-w-2xl mx-auto text-center">
+  Each detective will receive unique clues and can ask different questions to the suspects. Share your findings with each other to identify the culprit!
+</p>
+
       <button
         onClick={() => setScreen("selection")}
         className="bg-amber-500 hover:bg-amber-600 text-gray-900 font-bold py-3 px-8 rounded-lg text-xl transition-all duration-300 transform hover:scale-105 shadow-lg"
@@ -91,7 +97,21 @@ const App = () => {
   );
 
   const renderGameScreen = () => (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-10">
+  <div className="space-y-6 mt-10">
+    
+    {/* The Case - Full Width */}
+    <div className="bg-gray-800 rounded-xl p-6 shadow-lg">
+      <h2 className="title text-2xl font-bold mb-4 text-amber-400">The Case</h2>
+      <div className="text-gray-300 space-y-4 leading-relaxed">
+        {gameData.story.split("\n").map((para, idx) => (
+          <p key={idx}>{para}</p>
+        ))}
+      </div>
+    </div>
+
+    {/* BELOW: Grid Columns */}
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      
       {/* Clues */}
       <div>
         <div className="bg-gray-800 rounded-xl p-6 shadow-lg mb-6">
@@ -164,14 +184,17 @@ const App = () => {
             <div className={`mt-4 p-3 rounded text-center ${isCorrect ? "bg-green-500" : "bg-red-500"} text-white`}>
               {isCorrect ? "🎉 Correct! Well done!" : "❌ Incorrect. Try again!"}
               <div className="text-sm mt-2">
-                Correct Answer: <strong>{gameData.solution.culprit}</strong> with <strong>{gameData.solution.weapon}</strong> in <strong>{gameData.solution.place}</strong>
+                Correct Answer: <strong>{gameData.solution.culprit}</strong> with <strong>{gameData.solution.weapon}</strong> in <strong>{gameData.solution.place}</strong><br />
+                <strong>{gameData.solution.explanation}</strong>
               </div>
             </div>
           )}
         </div>
       </div>
-    </div>
-  );
+    </div> {/* end of grid */}
+  </div> // end of space-y wrapper
+);
+
 
   const renderInterviewModal = () => {
     if (!activeSuspect) return null;
