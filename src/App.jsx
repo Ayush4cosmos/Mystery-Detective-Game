@@ -154,12 +154,21 @@ const App = () => {
 
       {/* Notebook + Final Guess */}
       <div>
-        <div className="bg-gray-800 rounded-xl p-6 shadow-lg mb-6">
+        <div className="bg-gray-800 rounded-xl p-4 shadow-lg mb-6">
+        <h2 className="title text-2xl font-bold mb-4 text-amber-400">Detective's Notebook</h2>
+        <textarea
+  className="w-full h-40 p-3 text-gray-800 rounded-lg border border-gray-300 resize-none focus:outline-none focus:ring-2 focus:ring-amber-400"
+  placeholder="Write your notes here..."
+  style={{ backgroundColor: '#fdf6e3' }}  // soft yellow paper feel
+/>
+        {/* <div className="bg-gray-800 rounded-xl p-6 shadow-lg mb-6">
           <h2 className="title text-2xl font-bold mb-4 text-amber-400">Detective's Notebook</h2>
           <div className="notebook-paper p-4 text-gray-800">
             <textarea className="w-full h-40 bg-transparent border-none resize-none focus:outline-none focus:ring-0" placeholder="Write your notes here..." />
           </div>
-        </div>
+        </div> */}
+</div>
+
         <div className="bg-gray-800 rounded-xl p-6 shadow-lg">
           <h2 className="title text-2xl font-bold mb-4 text-amber-400">Solve the Case</h2>
           <input className="w-full p-2 mb-2 bg-gray-700 rounded text-white" placeholder="Culprit (e.g., Suspect 5)" value={groupGuess.culprit} onChange={(e) => setGroupGuess({ ...groupGuess, culprit: e.target.value })} />
