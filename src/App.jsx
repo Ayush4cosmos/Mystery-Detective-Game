@@ -99,15 +99,31 @@ const App = () => {
               p === "A" ? "bg-red-700" : p === "B" ? "bg-blue-700" : p === "C" ? "bg-green-700" : "bg-purple-700"
             }`}>{p}</div>
             <h3 className="title text-xl font-bold text-center mb-2">Detective {p}</h3>
-            <p className="text-center text-gray-400">Investigator</p>
+            <p className="text-center text-gray-400">{gameData.specialties[p]}</p>
+
           </div>
         ))}
       </div>
     </div>
   );
 
-  const renderGameScreen = () => (
-    
+  const renderGameScreen = () => {
+    const suspectColors = [
+  "bg-yellow-500",  // 1
+  "bg-orange-500",  // 2
+  "bg-red-600",     // 3
+  "bg-pink-500",    // 4
+  "bg-green-500",   // 5
+  "bg-blue-600",    // 6
+  "bg-purple-600",  // 7
+  "bg-teal-500",    // 8
+  "bg-rose-500",    // 9
+  "bg-cyan-500",    // 10
+  "bg-indigo-500",  // 11
+  "bg-lime-500"     // 12
+];
+
+  return (
   <div className="space-y-6 mt-10">
     
     {/* The Case - Full Width */}
@@ -146,19 +162,24 @@ const App = () => {
         <div className="bg-gray-800 rounded-xl p-6 shadow-lg">
           <h2 className="title text-2xl font-bold mb-4 text-amber-400">Suspects</h2>
           <div className="space-y-3">
-            {suspectsList.map((suspect, i) => (
-              <div
-                key={i}
-                className="suspect-card p-3 bg-gray-700 rounded-lg flex items-center cursor-pointer"
-                onClick={() => setActiveSuspect(suspect)}
-              >
-                <div className="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">{i + 1}</div>
-                <div>
-                  <h3 className="font-bold">{suspect}</h3>
-                  <p className="text-sm text-gray-400">Click to interrogate</p>
-                </div>
-              </div>
-            ))}
+            {Object.entries(gameData.suspects).map(([suspectKey, suspectData], i) => (
+  <div
+    key={suspectKey}
+    className="suspect-card p-3 bg-gray-700 rounded-lg flex items-center cursor-pointer"
+    onClick={() => setActiveSuspect(suspectKey)}
+  >
+    <div className={`w-12 h-12 ${suspectColors[i % suspectColors.length]} rounded-full flex items-center justify-center text-white font-bold text-xl mr-4`}>
+
+      {i + 1}
+    </div>
+    <div>
+      <h3 className="font-bold text-white">Suspect {i + 1}: {suspectData.name}</h3>
+      <p className="font-bold text-sm text-gray-400">{suspectData.description}</p>
+      <p className="text-sm text-gray-500 italic">Click to interrogate</p>
+    </div>
+  </div>
+))}
+
           </div>
         </div>
       </div>
@@ -182,9 +203,10 @@ const App = () => {
 
         <div className="bg-gray-800 rounded-xl p-6 shadow-lg">
           <h2 className="title text-2xl font-bold mb-4 text-amber-400">Solve the Case</h2>
-          <input className="w-full p-2 mb-2 bg-gray-700 rounded text-white" placeholder="Culprit (e.g., Suspect 5)" value={groupGuess.culprit} onChange={(e) => setGroupGuess({ ...groupGuess, culprit: e.target.value })} />
-          <input className="w-full p-2 mb-2 bg-gray-700 rounded text-white" placeholder="Weapon" value={groupGuess.weapon} onChange={(e) => setGroupGuess({ ...groupGuess, weapon: e.target.value })} />
-          <input className="w-full p-2 mb-4 bg-gray-700 rounded text-white" placeholder="Place" value={groupGuess.place} onChange={(e) => setGroupGuess({ ...groupGuess, place: e.target.value })} />
+          <p className="font-bold text-sm text-gray-300 mb-4">
+            When all detectives have gathered their clues and questioned suspects,
+            discuss your findings together and submit your solution.
+          </p>
           <button
             onClick={() => setShowSolutionModal(true)}
             className="w-full bg-amber-500 hover:bg-amber-600 text-gray-900 font-bold py-2 px-4 rounded-lg transition-all duration-300"
@@ -246,45 +268,78 @@ const App = () => {
       </div>
     </div> {/* end of grid */}
   </div> // end of space-y wrapper
-);
+  );
+};
 
 
   const renderInterviewModal = () => {
-    if (!activeSuspect) return null;
-    const questions = playerQuestions[activeSuspect] || [];
-    const suspectAnswers = gameData.suspects[activeSuspect]?.answers?.[selectedPlayer] || [];
+  if (!activeSuspect) return null;
 
-    const alreadyAskedIndex = revealedAnswers[selectedPlayer]?.[activeSuspect]?.[0];
+  const questions = playerQuestions[activeSuspect] || [];
+  const suspectData = gameData.suspects[activeSuspect];
+  const suspectAnswers = suspectData?.answers?.[selectedPlayer] || [];
 
-    return (
-      <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
-        <div className="bg-gray-800 rounded-xl p-6 max-w-2xl w-full mx-4">
-          <div className="flex justify-between items-center mb-4">
-            <h2 className="title text-2xl font-bold text-amber-400">{activeSuspect}</h2>
-            <button onClick={() => setActiveSuspect(null)} className="text-gray-400 hover:text-white text-2xl">&times;</button>
+  const alreadyAskedIndex = revealedAnswers[selectedPlayer]?.[activeSuspect]?.[0];
+  const i = Object.keys(gameData.suspects).indexOf(activeSuspect);
+
+  const suspectColors = [
+    "bg-yellow-500",
+    "bg-orange-500",
+    "bg-red-600",
+    "bg-pink-500",
+    "bg-green-500",
+    "bg-blue-600",
+    "bg-purple-600",
+    "bg-teal-500",
+    "bg-rose-500",
+    "bg-cyan-500",
+    "bg-indigo-500"
+  ];
+
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+      <div className="bg-gray-800 rounded-xl p-6 max-w-2xl w-full mx-4">
+        {/* Header */}
+        <div className="flex justify-between items-start mb-4">
+          <div className="flex items-center space-x-4">
+            <div className={`w-12 h-12 ${suspectColors[i % suspectColors.length]} rounded-full flex items-center justify-center text-white font-bold text-xl`}>
+              {i + 1}
+            </div>
+            <div>
+              <h2 className="title text-2xl font-bold text-amber-400">{suspectData.name}</h2>
+              <p className="text-sm text-gray-300">{suspectData.description}</p>
+            </div>
           </div>
-          <div className="space-y-3">
-            {questions.map((q, qIndex) => {
-              const isRevealed = alreadyAskedIndex === qIndex;
-              const isDisabled = alreadyAskedIndex !== undefined && alreadyAskedIndex !== qIndex;
-              return (
-                <button
-                  key={qIndex}
-                  onClick={() => handleAskQuestion(activeSuspect, qIndex)}
-                  disabled={isDisabled}
-                  className={`question-btn w-full text-left p-3 bg-gray-700 hover:bg-gray-600 rounded-lg transition-colors ${
-                    isDisabled ? "opacity-50 cursor-not-allowed" : ""
-                  }`}
-                >
-                  {isRevealed ? suspectAnswers[qIndex] || "No answer" : q}
-                </button>
-              );
-            })}
-          </div>
+          <button onClick={() => setActiveSuspect(null)} className="text-gray-400 hover:text-white text-2xl">&times;</button>
+        </div>
+
+        {/* Prompt */}
+        <h3 className="text-amber-400 font-bold mb-2 mt-2">Choose one question to ask:</h3>
+
+        {/* Questions */}
+        <div className="space-y-3">
+          {questions.map((q, qIndex) => {
+            const isRevealed = alreadyAskedIndex === qIndex;
+            const isDisabled = alreadyAskedIndex !== undefined && alreadyAskedIndex !== qIndex;
+            return (
+              <button
+                key={qIndex}
+                onClick={() => handleAskQuestion(activeSuspect, qIndex)}
+                disabled={isDisabled}
+                className={`question-btn w-full text-left p-3 bg-gray-700 hover:bg-gray-600 rounded-lg transition-colors ${
+                  isDisabled ? "opacity-50 cursor-not-allowed" : ""
+                }`}
+              >
+                {isRevealed ? suspectAnswers[qIndex] || "No answer" : q}
+              </button>
+            );
+          })}
         </div>
       </div>
-    );
-  };
+    </div>
+  );
+};
+
 
   return (
     <div className="min-h-screen bg-[#1a1a2e] text-[#e6e6e6] px-4 pb-10">

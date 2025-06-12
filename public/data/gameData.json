@@ -78,6 +78,8 @@
   
   "suspects": {
     "Suspect 1": {
+      "name": "",
+      "description":"",
       "answers": {
         "A": ["I was examining how time stopped the moment of blackout.", "Yes, I saw the lights flicker twice.", "I didn’t see anyone touching the case."],
         "B": ["My shoes are muddy due to rain — I stepped outside earlier.", "I absentmindedly touched the frame checking alignment.", "I was watching the anniversary clock."],
@@ -86,6 +88,8 @@
       }
     },
     "Suspect 2": {
+      "name": "",
+      "description":"",
       "answers": {
         "A": ["That’s my lucky coin in pocket.", "I checked the panel — not me.", "I held the rope to keep order."],
         "B": ["My coat is water resistant, that’s why damp.", "I was fiddling with the panel to check for outages.", "My watch is precise — I noticed the minute blink."],
@@ -94,6 +98,8 @@
       }
     },
     "Suspect 3": {
+      "name": "",
+      "description":"",
       "answers": {
         "A": ["It’s a gift — cufflinks.", "Rain got to them, yes.", "I stayed to admire art after the reveal."],
         "B": ["One cufflink fell — I didn’t notice.", "Yes I approached twice to speak to curator.", "I held a flashlight during the flicker."],
@@ -102,6 +108,8 @@
       }
     },
     "Suspect 4": {
+      "name": "",
+      "description":"",
       "answers": {
         "A": ["I tested the case glass earlier.", "I stepped back when power cut.", "Only my phone."],
         "B": ["Yes, I recorded a few seconds.", "Yes, I stepped into study.", "I restored panels once."],
@@ -110,6 +118,8 @@
       }
     },
     "Suspect 5": {
+      "name": "",
+      "description":"",
       "answers": {
         "A": ["I deal in art restoration — cyanide remover.", "I didn’t touch bottles.", "I was alone, reviewing the exhibit."],
         "B": ["Yes, I’m familiar with removing paint.", "I tuned the bottle setup.", "I stayed in the gallery post-midnight."],
@@ -118,6 +128,8 @@
       }
     },
     "Suspect 6": {
+      "name": "",
+      "description":"",
       "answers": {
         "A": ["I stepped out to take an urgent call.", "Just cleaning my glasses.", "Garden was air."],
         "B": ["Yes — I heard the scream near corridor.", "I was with Suspect 3 outside.", "No I went back inside after noise."],
@@ -126,6 +138,8 @@
       }
     },
     "Suspect 7": {
+      "name": "Ayush",
+      "description":"Former business partner of the victim",
       "answers": {
         "A": ["Gloves are muddy by garden.", "Yes, I tinker occasionally.", "I did hear a crashing echo."],
         "B": ["I noticed Suspect 5 acting oddly.", "I was checking ceiling wiring.", "Yes saw Suspect 8 near corner."],
@@ -134,6 +148,8 @@
       }
     },
     "Suspect 8": {
+      "name": "",
+      "description":"",
       "answers": {
         "A": ["I’m distant from events.", "Yes, I was tense.", "I didn’t see much."],
         "B": ["I panicked when lights went out.", "Someone stumbled — I got scared.", "Yes — I feared it was dangerous."],
@@ -159,6 +175,14 @@
     "Study"
   ]
 },
+
+"specialties": {
+  "A": "Specializes in forensic evidence",
+  "B": "Expert in behavioral analysis",
+  "C": "Skilled in witness interviews",
+  "D": "Specializes in motive analysis"
+},
+
 
   "solution": {
     "culprit": "Suspect 5",
