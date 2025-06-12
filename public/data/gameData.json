@@ -143,10 +143,28 @@
     }
   },
 
+  "options": {
+  "weapons": [
+    "Cyanide (disguised as restoration solvent)",
+    "Knife",
+    "Gun",
+    "Strangulation",
+    "Blunt Force"
+  ],
+  "locations": [
+    "Grand Gallery (just beneath the dagger casing)",
+    "Library",
+    "Kitchen",
+    "Garden",
+    "Study"
+  ]
+},
+
   "solution": {
     "culprit": "Suspect 5",
     "weapon": "Cyanide (disguised as restoration solvent)",
     "place": "Grand Gallery (just beneath the dagger casing)",
     "explanation": "Suspect 5, an art restoration expert, intentionally disabled the gallery lighting using a rare solvent circuit breaker trick (causing 37‑sec blackout), swapped the dagger using the eerily similar restoration solvent container, and slipped the dagger sheath into their coat. The blue ink was residue from their solvent pen. They intended to poison Mr. Hawthorne with cyanide but panicked, causing the dagger theft instead. Every clue — ink stains, lavender glove scent, hourglass, mud, sheath — connects to Suspect 5’s profession and actions."
   }
+
 }

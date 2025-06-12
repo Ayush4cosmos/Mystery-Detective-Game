@@ -8,6 +8,16 @@ const players = ["A", "B", "C", "D"];
 const suspectsList = Array.from({ length: 8 }, (_, i) => `Suspect ${i + 1}`);
 
 const App = () => {
+  const [showSolutionModal, setShowSolutionModal] = useState(false);
+  const [selectedCulprits, setSelectedCulprits] = useState([]);
+  const [selectedMethod, setSelectedMethod] = useState("");
+  const [selectedLocation, setSelectedLocation] = useState("");
+  const [partialCorrect, setPartialCorrect] = useState({
+  culprits: false,
+  method: false,
+  location: false
+});
+
   const [screen, setScreen] = useState("intro"); // intro, selection, game
   const [selectedPlayer, setSelectedPlayer] = useState(null);
   const [gameData, setGameData] = useState(null);
@@ -97,6 +107,7 @@ const App = () => {
   );
 
   const renderGameScreen = () => (
+    
   <div className="space-y-6 mt-10">
     
     {/* The Case - Full Width */}
@@ -175,29 +186,62 @@ const App = () => {
           <input className="w-full p-2 mb-2 bg-gray-700 rounded text-white" placeholder="Weapon" value={groupGuess.weapon} onChange={(e) => setGroupGuess({ ...groupGuess, weapon: e.target.value })} />
           <input className="w-full p-2 mb-4 bg-gray-700 rounded text-white" placeholder="Place" value={groupGuess.place} onChange={(e) => setGroupGuess({ ...groupGuess, place: e.target.value })} />
           <button
+            onClick={() => setShowSolutionModal(true)}
             className="w-full bg-amber-500 hover:bg-amber-600 text-gray-900 font-bold py-2 px-4 rounded-lg transition-all duration-300"
-            onClick={() => {
-              const correct = gameData.solution;
-              const match = correct &&
-                groupGuess.culprit.toLowerCase() === correct.culprit.toLowerCase() &&
-                groupGuess.weapon.toLowerCase() === correct.weapon.toLowerCase() &&
-                groupGuess.place.toLowerCase() === correct.place.toLowerCase();
-              setIsCorrect(match);
-              setGuessSubmitted(true);
-            }}
-            disabled={guessSubmitted}
           >
             Submit Solution
           </button>
           {guessSubmitted && (
-            <div className={`mt-4 p-3 rounded text-center ${isCorrect ? "bg-green-500" : "bg-red-500"} text-white`}>
-              {isCorrect ? "🎉 Correct! Well done!" : "❌ Incorrect. Try again!"}
-              <div className="text-sm mt-2">
-                Correct Answer: <strong>{gameData.solution.culprit}</strong> with <strong>{gameData.solution.weapon}</strong> in <strong>{gameData.solution.place}</strong><br />
-                <strong>{gameData.solution.explanation}</strong>
-              </div>
-            </div>
-          )}
+  <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+    <div className="bg-gray-800 rounded-xl p-6 max-w-2xl w-full mx-4 text-white">
+      <h2 className="title text-3xl font-bold mb-4 text-amber-400">
+        {isCorrect ? "Case Solved!" : "Case Unsolved"}
+      </h2>
+      {isCorrect && (
+  <p className="text-green-400 font-semibold mb-4">
+    🎉 Congratulations! You've solved the case completely!
+  </p>
+)}
+
+
+      {!isCorrect && (
+  <>
+    <p className="text-red-400 font-semibold mb-4">Unfortunately, your deductions were incorrect.</p>
+
+    {/* ✅ Partial Feedback */}
+    <div className="mb-4 text-white">
+      <p className="mb-1 font-semibold">You got:</p>
+      <ul className="list-disc list-inside text-sm space-y-1">
+        {partialCorrect.culprits && <li>✅ Correctly identified the culprit(s)</li>}
+        {partialCorrect.method && <li>✅ Correctly identified the method</li>}
+        {partialCorrect.location && <li>✅ Correctly identified the location</li>}
+        {!partialCorrect.culprits && !partialCorrect.method && !partialCorrect.location && (
+          <li>❌ No part of your guess was correct.</li>
+        )}
+      </ul>
+    </div>
+  </>
+)}
+
+{/* ✅ Always show the full explanation */}
+<div className="text-gray-200 space-y-4 leading-relaxed mt-6">
+  <div dangerouslySetInnerHTML={{ __html: gameData.solution.explanation }} />
+</div>
+
+
+
+      <div className="mt-6 text-center">
+        <button
+          onClick={() => window.location.reload()}
+          className="bg-amber-500 hover:bg-amber-600 text-gray-900 font-bold py-2 px-6 rounded-lg transition-all duration-300"
+        >
+          Play Again
+        </button>
+      </div>
+    </div>
+  </div>
+)}
+
         </div>
       </div>
     </div> {/* end of grid */}
@@ -255,6 +299,112 @@ const App = () => {
       {screen === "intro" && renderIntroScreen()}
       {screen === "selection" && renderDetectiveSelection()}
       {screen === "game" && renderGameScreen()}
+      {showSolutionModal && (
+  <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+    <div className="bg-gray-800 rounded-xl p-6 max-w-2xl w-full mx-4">
+      <h2 className="title text-2xl font-bold mb-6 text-amber-400">Submit Your Solution</h2>
+
+      <div className="mb-6">
+        <h3 className="font-bold mb-2">Who is the culprit?</h3>
+        <div className="grid grid-cols-2 gap-3">
+          {Object.keys(gameData.suspects).map((suspect, idx) => (
+            <label key={suspect} className="flex items-center space-x-2 cursor-pointer">
+              <input
+                type="checkbox"
+                value={suspect}
+                checked={selectedCulprits.includes(suspect)}
+                onChange={(e) => {
+                  const isChecked = e.target.checked;
+                  setSelectedCulprits((prev) =>
+                    isChecked ? [...prev, suspect] : prev.filter((s) => s !== suspect)
+                  );
+                }}
+              />
+              <span className="flex items-center">
+                <span className={`w-8 h-8 bg-amber-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-2`}>
+                  {idx + 1}
+                </span>
+                {suspect}
+              </span>
+            </label>
+          ))}
+        </div>
+      </div>
+
+      <div className="mb-6">
+        <h3 className="font-bold mb-2">What was the method used?</h3>
+        <select
+          value={selectedMethod}
+          onChange={(e) => setSelectedMethod(e.target.value)}
+          className="w-full bg-gray-700 text-white p-2 rounded-lg"
+        >
+          <option value="">Select method...</option>
+          {gameData.options.weapons.map((weapon, i) => (
+  <option key={i} value={weapon}>{weapon}</option>
+))}
+
+        </select>
+      </div>
+
+      <div className="mb-6">
+        <h3 className="font-bold mb-2">Where did the crime occur?</h3>
+        <select
+          value={selectedLocation}
+          onChange={(e) => setSelectedLocation(e.target.value)}
+          className="w-full bg-gray-700 text-white p-2 rounded-lg"
+        >
+          <option value="">Select location...</option>
+          {gameData.options.locations.map((place, i) => (
+  <option key={i} value={place}>{place}</option>
+))}
+
+        </select>
+      </div>
+
+      <div className="flex justify-between">
+        <button
+          onClick={() => setShowSolutionModal(false)}
+          className="bg-gray-600 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded-lg transition-colors"
+        >
+          Cancel
+        </button>
+        <button
+          onClick={() => {
+  const correct = gameData.solution;
+
+  // Handle single or multiple culprits
+  const actualCulprits = Array.isArray(correct.culprits)
+    ? correct.culprits
+    : [correct.culprit];
+
+  const culpritsCorrect =
+    JSON.stringify(selectedCulprits.sort()) === JSON.stringify(actualCulprits.sort());
+
+  const methodCorrect = selectedMethod === correct.weapon;
+  const locationCorrect = selectedLocation === correct.place;
+
+  const correctCount =
+    (culpritsCorrect ? 1 : 0) + (methodCorrect ? 1 : 0) + (locationCorrect ? 1 : 0);
+
+  setIsCorrect(correctCount === 3);
+  setPartialCorrect({
+    culprits: culpritsCorrect,
+    method: methodCorrect,
+    location: locationCorrect
+  });
+  setGuessSubmitted(true);
+  setShowSolutionModal(false);
+}}
+
+          className="bg-amber-500 hover:bg-amber-600 text-gray-900 font-bold py-2 px-4 rounded-lg transition-colors"
+        >
+          Confirm
+        </button>
+      </div>
+    </div>
+  </div>
+)}
+
       {renderInterviewModal()}
     </div>
   );
