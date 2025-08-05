@@ -198,7 +198,7 @@ const App = () => {
           <div className="notebook-paper p-4 text-gray-800">
             <textarea className="w-full h-40 bg-transparent border-none resize-none focus:outline-none focus:ring-0" placeholder="Write your notes here..." />
           </div>
-        </div> */}
+        </div> */} 
 </div>
 
         <div className="bg-gray-800 rounded-xl p-6 shadow-lg">

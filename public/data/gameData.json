@@ -1,463 +1,194 @@
 {
-  "story": "On a stormy autumn night, the sprawling Langford Estate was alive with laughter, music, and the clinking of glasses. Gregory Langford, an influential but controversial art collector, was hosting a private gala to unveil a newly acquired painting rumored to be a lost work of Caravaggio. Among the elite guests were artists, investors, and rivals, each with their own hidden reasons for being there.\n\nAs lightning flickered across the stained-glass windows of the Art Vault, Gregory was found dead \u2014 face down in his wine glass at the head of the long oak dining table. Panic ensued. The doors had been locked. No one had entered or left since dinner began.\n\nWhispers of sabotage, jealousy, and decades-old grudges filled the marble halls. The painting itself had vanished. Gregory\u2019s last words, scribbled in a corner of his guestbook, read only: 'The mask slips tonight.'\n\nFour detectives \u2014 each with unique talents \u2014 have been brought in to interrogate the guests and uncover what really happened inside the Langford Estate. But with misleading alibis, staged scenes, and overlapping motives, this case may prove as layered as the stolen painting itself.",
-  "specialties": {
-    "A": "Expert in forensic chemistry",
-    "B": "Behavioral psychologist",
-    "C": "Specialist in witness interrogation",
-    "D": "Investigator of financial and motive patterns"
-  },
+  "story": "On a rainy midnight, the affluent art collector Mr. Hawthorne hosted a private unveiling in his opulent mansion. The main exhibit—a priceless renaissance dagger—was enshrined in a glass case at the center of the grand gallery. As the clock chimed 11:47 PM, the lights flickered, and guests gasped: the dagger was gone, and Mr. Hawthorne lay unconscious on the marble floor, a single drop of rare blue ink staining his shirt cuff. The power was out for exactly 37 seconds.\n\nAmidst the thunder, one guest quietly slipped away. Only subtle details will expose the culprit.",
+  
   "players": {
     "A": {
-      "name": "Dr. Evelyn Shaw",
       "clues": [
-        "Traces of potassium cyanide were found in the base of Gregory\u2019s wine glass \u2014 carefully masked beneath the tannins of the red.",
-        "A partial fingerprint, smudged but consistent with pressure from a left thumb, was found on the cork of the poisoned wine bottle.",
-        "The antique dagger on display had recently been cleaned \u2014 but minute traces of blood were found under the hilt.",
-        "Residue of an uncommon cleaning solvent was detected in the Art Vault, often used to preserve canvas from UV damage.",
-        "Broken glass was embedded in the carpet near the gallery entrance \u2014 not from Gregory\u2019s glass but from a decorative sculpture nearby.",
-        "A single red fiber was found near the chair Gregory was seated in \u2014 synthetic, not matching his or staff uniforms.",
-        "The poison used was administered recently \u2014 within 10\u201315 minutes of his last sip, suggesting it wasn\u2019t planted earlier.",
-        "The Art Vault\u2019s temperature controls had been overridden briefly at 7:43 PM \u2014 the logs were manually deleted but partially recovered."
+        "You noticed the hourglass on the mantel stopped with exactly 37 seconds of sand left.",
+        "A blue ink stain on the velvet rope caught your eye near the exhibit.",
+        "Suspect 3’s cufflinks glinted unnatural blue in your flashlight beam.",
+        "Footprints in the dark were only visible from the window’s rain reflection."
       ],
       "questions": {
-        "Suspect 1": [
-          "What do you know about the wine served to Gregory?",
-          "Did you handle or come near any of the glassware during the gala?",
-          "Were you aware of any temperature changes in the Art Vault?"
-        ],
-        "Suspect 2": [
-          "What do you know about the wine served to Gregory?",
-          "Did you handle or come near any of the glassware during the gala?",
-          "Were you aware of any temperature changes in the Art Vault?"
-        ],
-        "Suspect 3": [
-          "What do you know about the wine served to Gregory?",
-          "Did you handle or come near any of the glassware during the gala?",
-          "Were you aware of any temperature changes in the Art Vault?"
-        ],
-        "Suspect 4": [
-          "What do you know about the wine served to Gregory?",
-          "Did you handle or come near any of the glassware during the gala?",
-          "Were you aware of any temperature changes in the Art Vault?"
-        ],
-        "Suspect 5": [
-          "What do you know about the wine served to Gregory?",
-          "Did you handle or come near any of the glassware during the gala?",
-          "Were you aware of any temperature changes in the Art Vault?"
-        ],
-        "Suspect 6": [
-          "What do you know about the wine served to Gregory?",
-          "Did you handle or come near any of the glassware during the gala?",
-          "Were you aware of any temperature changes in the Art Vault?"
-        ],
-        "Suspect 7": [
-          "What do you know about the wine served to Gregory?",
-          "Did you handle or come near any of the glassware during the gala?",
-          "Were you aware of any temperature changes in the Art Vault?"
-        ],
-        "Suspect 8": [
-          "What do you know about the wine served to Gregory?",
-          "Did you handle or come near any of the glassware during the gala?",
-          "Were you aware of any temperature changes in the Art Vault?"
-        ]
+        "Suspect 1": ["Why were you examining the hourglass?", "Did the lights flicker for you?", "Did you notice anyone near the glass case?"],
+        "Suspect 2": ["What’s in your pocket that rattles?", "Why did you glance at the security camera?", "Did you hold a velvet rope before the lights went out?"],
+        "Suspect 3": ["Where did your cufflinks come from?", "Did your cuff get wet in the rain?", "Why did you linger when others left?"],
+        "Suspect 4": ["Did you touch the glass case?", "Why did you step away when the lights went out?", "Were you carrying anything?"],
+        "Suspect 5": ["What ink brand do you use to sign art?", "Were you near the exhibit before the blackout?", "Why did you check the dagger’s case?"],
+        "Suspect 6": ["Did you cause the flicker?", "Why do you know the hourglass time exactly?", "Were you holding the dagger earlier?"],
+        "Suspect 7": ["Did you notice the door to the study open?", "Why were you fiddling with the light switch?", "Did you record this on your phone?"],
+        "Suspect 8": ["Were you by the back exit?", "Did you hear something drop?", "Why didn’t you help poor Mr. Hawthorne?"]
       }
     },
     "B": {
-      "name": "Lt. Marcus Vane",
       "clues": [
-        "Eleanor remained unusually calm throughout the announcement of Gregory\u2019s death, even sipping from her glass while others panicked.",
-        "Victor exhibited defensive aggression and was quick to blame \u2018old ghosts\u2019 in the room during initial questioning.",
-        "Isabelle repeatedly shifted blame to the staff \u2014 a classic projection pattern seen in public humiliation trauma.",
-        "Celeste avoided eye contact during every question about the painting \u2014 suggesting deeper emotional entanglement.",
-        "Omar flinched when the word 'audit' was mentioned, and twice misspoke Gregory's name during interviews.",
-        "Julian\u2019s speech patterns changed drastically when discussing his withdrawn funding \u2014 indicating concealed regret or fear.",
-        "Mira\u2019s tone fluctuated between seduction and bitterness \u2014 unresolved emotions typical of rekindled resentment.",
-        "Sebastian showed micro-expressions of satisfaction during discussions of Gregory\u2019s death \u2014 inconsistent with mourning or fear."
+        "Rain showed a muddy shoe impression behind the velvet rope.",
+        "A photocopy of a blue-ink signature was on your palm.",
+        "Security panel shows power drop exactly at the moment of theft.",
+        "One portrait’s frame was unscrewed slightly—fastidious work."
       ],
       "questions": {
-        "Suspect 1": [
-          "Why did you seem so calm after Gregory's death?",
-          "How did you feel about Gregory's treatment of his staff?",
-          "Did anyone seem particularly nervous during dinner?"
-        ],
-        "Suspect 2": [
-          "Why did you seem so calm after Gregory's death?",
-          "How did you feel about Gregory's treatment of his staff?",
-          "Did anyone seem particularly nervous during dinner?"
-        ],
-        "Suspect 3": [
-          "Why did you seem so calm after Gregory's death?",
-          "How did you feel about Gregory's treatment of his staff?",
-          "Did anyone seem particularly nervous during dinner?"
-        ],
-        "Suspect 4": [
-          "Why did you seem so calm after Gregory's death?",
-          "How did you feel about Gregory's treatment of his staff?",
-          "Did anyone seem particularly nervous during dinner?"
-        ],
-        "Suspect 5": [
-          "Why did you seem so calm after Gregory's death?",
-          "How did you feel about Gregory's treatment of his staff?",
-          "Did anyone seem particularly nervous during dinner?"
-        ],
-        "Suspect 6": [
-          "Why did you seem so calm after Gregory's death?",
-          "How did you feel about Gregory's treatment of his staff?",
-          "Did anyone seem particularly nervous during dinner?"
-        ],
-        "Suspect 7": [
-          "Why did you seem so calm after Gregory's death?",
-          "How did you feel about Gregory's treatment of his staff?",
-          "Did anyone seem particularly nervous during dinner?"
-        ],
-        "Suspect 8": [
-          "Why did you seem so calm after Gregory's death?",
-          "How did you feel about Gregory's treatment of his staff?",
-          "Did anyone seem particularly nervous during dinner?"
-        ]
+        "Suspect 1": ["Why is your shoe muddy inside?", "Did you touch the portrait frame?", "Where were you when the lights failed?"],
+        "Suspect 2": ["Why is your coat damp?", "What were you doing by the security panel?", "Did you glance at your watch during the blackout?"],
+        "Suspect 3": ["Why is your cufflink missing?", "Did you approach the exhibit twice?", "What were you holding before the lights went out?"],
+        "Suspect 4": ["Why is your phone recording outside the glass?", "Did you enter the study?", "Who taught you to open security panels?"],
+        "Suspect 5": ["How well do you know blue ink pens?", "Why did you handle the glass case?", "Do you use photo blue pencils?"],
+        "Suspect 6": ["Why did you adjust the gallery lighting?", "Do you know how the hourglass works?", "Were you alone when the lights flickered?"],
+        "Suspect 7": ["Did you unscrew a frame recently?", "Why did you step into the hallway?", "Are you an art restorer?"],
+        "Suspect 8": ["Were you cleaning the gallery earlier?", "Did you see the thief slip away?", "Why did you avoid the main exit?"]
       }
     },
     "C": {
-      "name": "Inspector Lila Grant",
       "clues": [
-        "The kitchen staff overheard Sebastian saying, 'He won\u2019t own anything after tonight' earlier that evening.",
-        "One server noticed Mira quietly slipping away during dessert \u2014 unaccounted for for nearly 12 minutes.",
-        "Isabelle asked about security camera locations during a casual conversation, claiming she 'hated being watched'.",
-        "Julian was caught whispering to Celeste near the wine cellar shortly before the lights flickered.",
-        "Victor\u2019s watch had been set 8 minutes fast \u2014 possibly to falsify his alibi timeline.",
-        "Omar nervously asked if the wine could be traced \u2014 before any toxicology results had been released.",
-        "A valet reported that Eleanor requested her car keys 'just in case she needed to leave fast' before dessert.",
-        "Celeste was overheard asking if Gregory\u2019s collection was insured by name or by market value."
+        "A paperclip of unusual design lies under the velvet rope.",
+        "A draft from the study could air out a fresh painting odor.",
+        "The dagger’s sheath was found pinned to a coat in the cloakroom.",
+        "No fingerprints except faint ones on the portrait frame."
       ],
       "questions": {
-        "Suspect 1": [
-          "Where were you during dessert service?",
-          "Who were you speaking with near the wine cellar?",
-          "Did you hear or see anything unusual before the lights flickered?"
-        ],
-        "Suspect 2": [
-          "Where were you during dessert service?",
-          "Who were you speaking with near the wine cellar?",
-          "Did you hear or see anything unusual before the lights flickered?"
-        ],
-        "Suspect 3": [
-          "Where were you during dessert service?",
-          "Who were you speaking with near the wine cellar?",
-          "Did you hear or see anything unusual before the lights flickered?"
-        ],
-        "Suspect 4": [
-          "Where were you during dessert service?",
-          "Who were you speaking with near the wine cellar?",
-          "Did you hear or see anything unusual before the lights flickered?"
-        ],
-        "Suspect 5": [
-          "Where were you during dessert service?",
-          "Who were you speaking with near the wine cellar?",
-          "Did you hear or see anything unusual before the lights flickered?"
-        ],
-        "Suspect 6": [
-          "Where were you during dessert service?",
-          "Who were you speaking with near the wine cellar?",
-          "Did you hear or see anything unusual before the lights flickered?"
-        ],
-        "Suspect 7": [
-          "Where were you during dessert service?",
-          "Who were you speaking with near the wine cellar?",
-          "Did you hear or see anything unusual before the lights flickered?"
-        ],
-        "Suspect 8": [
-          "Where were you during dessert service?",
-          "Who were you speaking with near the wine cellar?",
-          "Did you hear or see anything unusual before the lights flickered?"
-        ]
+        "Suspect 1": ["Why do you carry multiple paperclips?", "Did you open the coatroom?", "Are you an accountant?"],
+        "Suspect 2": ["Did you smell fresh paint earlier?", "Are you sensitive to drafts?", "Do you stockcoat documents?"],
+        "Suspect 3": ["Where did the sheath come from?", "Do you borrow coats easily?", "Were you near the cloakroom?"],
+        "Suspect 4": ["Did you enter the back study?", "Were you wearing gloves?", "Why were you near the dagger before display?"],
+        "Suspect 5": ["Why does the sheath match your coat shape?", "Did you touch the portrait frame?", "Are you familiar with restoration?"],
+        "Suspect 6": ["Did lighting test affect electronics?", "Why was your coat in the cloakroom?", "Did you return the sheath?"],
+        "Suspect 7": ["Do you collect unique paperclips?", "Why touch the frame twice?", "Did you patch the hourglass?"],
+        "Suspect 8": ["Why were you stabilizing a frame?", "Did you paint the day’s exhibit?", "Were you near the cloakroom too?"]
       }
     },
     "D": {
-      "name": "Agent Noah Reed",
       "clues": [
-        "Omar had discovered a forged insurance document listing a payout double the painting\u2019s public value.",
-        "Victor stood to gain full control of Langford\u2019s estate if Gregory died intestate \u2014 which he recently became.",
-        "Julian\u2019s firm had pulled out after rumors Gregory was inflating valuations using false provenance.",
-        "Celeste had signed a contract to authenticate the painting publicly \u2014 then hesitated two days before the gala.",
-        "Eleanor\u2019s gallery was bleeding money after losing the Caravaggio bid \u2014 and she owed favors to private lenders.",
-        "Isabelle\u2019s upcoming solo exhibit was mysteriously cancelled by Gregory \u2014 tanking her reputation and income.",
-        "Sebastian had access to the vault and was bribed months ago in another gallery security breach.",
-        "Mira received a wire transfer from an anonymous offshore account two days before the gala \u2014 flagged postmortem."
+        "A smudge of blue ink is found inside the study’s window sill.",
+        "The hourglass top had fingerprints different from any guest.",
+        "A faint scent of lavender—like a glove scent—lingered at the scene.",
+        "The dagger, when recovered, had a folded note inside its sheath."
       ],
       "questions": {
-        "Suspect 1": [
-          "Did you have any financial dealings with Gregory?",
-          "What would Gregory\u2019s death mean for your career?",
-          "Were you expecting any insurance payout or legal benefit?"
-        ],
-        "Suspect 2": [
-          "Did you have any financial dealings with Gregory?",
-          "What would Gregory\u2019s death mean for your career?",
-          "Were you expecting any insurance payout or legal benefit?"
-        ],
-        "Suspect 3": [
-          "Did you have any financial dealings with Gregory?",
-          "What would Gregory\u2019s death mean for your career?",
-          "Were you expecting any insurance payout or legal benefit?"
-        ],
-        "Suspect 4": [
-          "Did you have any financial dealings with Gregory?",
-          "What would Gregory\u2019s death mean for your career?",
-          "Were you expecting any insurance payout or legal benefit?"
-        ],
-        "Suspect 5": [
-          "Did you have any financial dealings with Gregory?",
-          "What would Gregory\u2019s death mean for your career?",
-          "Were you expecting any insurance payout or legal benefit?"
-        ],
-        "Suspect 6": [
-          "Did you have any financial dealings with Gregory?",
-          "What would Gregory\u2019s death mean for your career?",
-          "Were you expecting any insurance payout or legal benefit?"
-        ],
-        "Suspect 7": [
-          "Did you have any financial dealings with Gregory?",
-          "What would Gregory\u2019s death mean for your career?",
-          "Were you expecting any insurance payout or legal benefit?"
-        ],
-        "Suspect 8": [
-          "Did you have any financial dealings with Gregory?",
-          "What would Gregory\u2019s death mean for your career?",
-          "Were you expecting any insurance payout or legal benefit?"
-        ]
+        "Suspect 1": ["Why detect glove scents in a gallery?", "Do you wear lavender-scented gloves?", "Did you enter the study?"],
+        "Suspect 2": ["Whose fingerprints did you wipe off the hourglass?", "Do you carry a note always?", "Why keep a dagger sheath in your wallet?"],
+        "Suspect 3": ["What did the note say?", "Why do you know about lavender scent?", "Do you have restored gloves?"],
+        "Suspect 4": ["Did you use that dagger before?", "Why was the sheath empty?", "Do you know how to open the display case silently?"],
+        "Suspect 5": ["Why did your scent linger here?", "Do you wear lavender gloves?", "Were you in the study before the reveal?"],
+        "Suspect 6": ["Why were your fingerprints on the hourglass?", "Do you smell of lavender too?", "Were you handling the display case?"],
+        "Suspect 7": ["Do you restore hourglasses?", "Why did you bring your scented gloves?", "Did you write that note?"],
+        "Suspect 8": ["What was in that sheathed note?", "Why was it folded so neatly?", "Do you know any thieves?"]
       }
     }
   },
+  
   "suspects": {
     "Suspect 1": {
-      "name": "Eleanor Montgomery",
-      "description": "A rival gallery owner who lost a prized auction to Gregory just months ago. Known for her charisma and cutthroat deals.",
+      "name": "",
+      "description":"",
       "answers": {
-        "A": [
-          "I poured Gregory\u2019s wine, yes. I was near the decanter. But he insisted on choosing his own bottle that night. Said it was a 'rare treat'.",
-          "I may have touched one of the glasses, but I didn\u2019t linger. I helped adjust the seating arrangement when Gregory asked for more candles.",
-          "Now that you mention it, I did feel a chill in the Art Vault earlier \u2014 thought it was the old AC acting up again. Didn\u2019t think it was important."
-        ],
-        "B": [
-          "Would you rather I screamed? I\u2019ve seen worse in business. People die, and I don\u2019t fall apart. Doesn\u2019t mean I did anything.",
-          "Gregory could be... difficult. Charismatic, yes, but he barked orders. Some staff adored him, others feared him. It depends who you ask.",
-          "Nervous? Isabelle. Always glancing around, twiddling her necklace. And Omar \u2014 sweat beading like he\u2019d run a marathon."
-        ],
-        "C": [
-          "I stepped out for air. That roast was heavy, and I needed a moment. Alone. Just the balcony and me, I swear.",
-          "Julian. We talked briefly. He was upset \u2014 muttering about 'cutting ties'. I didn\u2019t press.",
-          "The lights flickered just after Celeste asked Gregory about the painting\u2019s origins. Coincidence? Maybe. But the timing was eerie."
-        ],
-        "D": [
-          "Gregory and I had... past dealings. He owed me favors, and I expected a return on my investments. That\u2019s not illegal.",
-          "His death? A door closes, a window opens. But don\u2019t twist that \u2014 I didn\u2019t want him dead. We had more to settle.",
-          "Insurance? No, I didn\u2019t know a thing about that. You think I needed him gone to gain something? That\u2019s a stretch."
-        ]
+        "A": ["I was examining how time stopped the moment of blackout.", "Yes, I saw the lights flicker twice.", "I didn’t see anyone touching the case."],
+        "B": ["My shoes are muddy due to rain — I stepped outside earlier.", "I absentmindedly touched the frame checking alignment.", "I was watching the anniversary clock."],
+        "C": ["I have a binder full of clips, yes.", "I opened it to secure papers in the study.", "I work as an accountant, yes."],
+        "D": ["I do smell like gloves.", "I tend to sniff for clean air.", "Yes, I opened the study door earlier."]
       }
     },
     "Suspect 2": {
-      "name": "Victor Langford",
-      "description": "Gregory\u2019s estranged brother. Rumored to have been cut out of the family inheritance after a bitter legal battle.",
+      "name": "",
+      "description":"",
       "answers": {
-        "A": [
-          "I poured Gregory\u2019s wine, yes. I was near the decanter. But he insisted on choosing his own bottle that night. Said it was a 'rare treat'.",
-          "I may have touched one of the glasses, but I didn\u2019t linger. I helped adjust the seating arrangement when Gregory asked for more candles.",
-          "Now that you mention it, I did feel a chill in the Art Vault earlier \u2014 thought it was the old AC acting up again. Didn\u2019t think it was important."
-        ],
-        "B": [
-          "Would you rather I screamed? I\u2019ve seen worse in business. People die, and I don\u2019t fall apart. Doesn\u2019t mean I did anything.",
-          "Gregory could be... difficult. Charismatic, yes, but he barked orders. Some staff adored him, others feared him. It depends who you ask.",
-          "Nervous? Isabelle. Always glancing around, twiddling her necklace. And Omar \u2014 sweat beading like he\u2019d run a marathon."
-        ],
-        "C": [
-          "I stepped out for air. That roast was heavy, and I needed a moment. Alone. Just the balcony and me, I swear.",
-          "Julian. We talked briefly. He was upset \u2014 muttering about 'cutting ties'. I didn\u2019t press.",
-          "The lights flickered just after Celeste asked Gregory about the painting\u2019s origins. Coincidence? Maybe. But the timing was eerie."
-        ],
-        "D": [
-          "Gregory and I had... past dealings. He owed me favors, and I expected a return on my investments. That\u2019s not illegal.",
-          "His death? A door closes, a window opens. But don\u2019t twist that \u2014 I didn\u2019t want him dead. We had more to settle.",
-          "Insurance? No, I didn\u2019t know a thing about that. You think I needed him gone to gain something? That\u2019s a stretch."
-        ]
+        "A": ["That’s my lucky coin in pocket.", "I checked the panel — not me.", "I held the rope to keep order."],
+        "B": ["My coat is water resistant, that’s why damp.", "I was fiddling with the panel to check for outages.", "My watch is precise — I noticed the minute blink."],
+        "C": ["The fresh paint is from a restoration crew, not me.", "I’m sensitive, I open windows.", "I do carry documents in my coat."],
+        "D": ["I cleaned fingerprints off hourglass earlier.", "Yes, I always carry notes.", "That sheath was accidently in the pocket."]
       }
     },
     "Suspect 3": {
-      "name": "Isabelle Chen",
-      "description": "A young prot\u00e9g\u00e9 of Gregory\u2019s, once favored, but recently humiliated after her work was removed from his collection without explanation.",
+      "name": "",
+      "description":"",
       "answers": {
-        "A": [
-          "I poured Gregory\u2019s wine, yes. I was near the decanter. But he insisted on choosing his own bottle that night. Said it was a 'rare treat'.",
-          "I may have touched one of the glasses, but I didn\u2019t linger. I helped adjust the seating arrangement when Gregory asked for more candles.",
-          "Now that you mention it, I did feel a chill in the Art Vault earlier \u2014 thought it was the old AC acting up again. Didn\u2019t think it was important."
-        ],
-        "B": [
-          "Would you rather I screamed? I\u2019ve seen worse in business. People die, and I don\u2019t fall apart. Doesn\u2019t mean I did anything.",
-          "Gregory could be... difficult. Charismatic, yes, but he barked orders. Some staff adored him, others feared him. It depends who you ask.",
-          "Nervous? Isabelle. Always glancing around, twiddling her necklace. And Omar \u2014 sweat beading like he\u2019d run a marathon."
-        ],
-        "C": [
-          "I stepped out for air. That roast was heavy, and I needed a moment. Alone. Just the balcony and me, I swear.",
-          "Julian. We talked briefly. He was upset \u2014 muttering about 'cutting ties'. I didn\u2019t press.",
-          "The lights flickered just after Celeste asked Gregory about the painting\u2019s origins. Coincidence? Maybe. But the timing was eerie."
-        ],
-        "D": [
-          "Gregory and I had... past dealings. He owed me favors, and I expected a return on my investments. That\u2019s not illegal.",
-          "His death? A door closes, a window opens. But don\u2019t twist that \u2014 I didn\u2019t want him dead. We had more to settle.",
-          "Insurance? No, I didn\u2019t know a thing about that. You think I needed him gone to gain something? That\u2019s a stretch."
-        ]
+        "A": ["It’s a gift — cufflinks.", "Rain got to them, yes.", "I stayed to admire art after the reveal."],
+        "B": ["One cufflink fell — I didn’t notice.", "Yes I approached twice to speak to curator.", "I held a flashlight during the flicker."],
+        "C": ["That sheath? Borrowed from staff.", "No, I didn’t steal it.", "Yes, I was adjusting coats near cloakroom."],
+        "D": ["We did whisper about curtains.", "We spoke of giving a toast.", "I did not touch the wine."]
       }
     },
     "Suspect 4": {
-      "name": "Sebastian Klein",
-      "description": "A private security advisor with ties to underground art dealings. Was seen arguing with Gregory hours before the murder.",
+      "name": "",
+      "description":"",
       "answers": {
-        "A": [
-          "I poured Gregory\u2019s wine, yes. I was near the decanter. But he insisted on choosing his own bottle that night. Said it was a 'rare treat'.",
-          "I may have touched one of the glasses, but I didn\u2019t linger. I helped adjust the seating arrangement when Gregory asked for more candles.",
-          "Now that you mention it, I did feel a chill in the Art Vault earlier \u2014 thought it was the old AC acting up again. Didn\u2019t think it was important."
-        ],
-        "B": [
-          "Would you rather I screamed? I\u2019ve seen worse in business. People die, and I don\u2019t fall apart. Doesn\u2019t mean I did anything.",
-          "Gregory could be... difficult. Charismatic, yes, but he barked orders. Some staff adored him, others feared him. It depends who you ask.",
-          "Nervous? Isabelle. Always glancing around, twiddling her necklace. And Omar \u2014 sweat beading like he\u2019d run a marathon."
-        ],
-        "C": [
-          "I stepped out for air. That roast was heavy, and I needed a moment. Alone. Just the balcony and me, I swear.",
-          "Julian. We talked briefly. He was upset \u2014 muttering about 'cutting ties'. I didn\u2019t press.",
-          "The lights flickered just after Celeste asked Gregory about the painting\u2019s origins. Coincidence? Maybe. But the timing was eerie."
-        ],
-        "D": [
-          "Gregory and I had... past dealings. He owed me favors, and I expected a return on my investments. That\u2019s not illegal.",
-          "His death? A door closes, a window opens. But don\u2019t twist that \u2014 I didn\u2019t want him dead. We had more to settle.",
-          "Insurance? No, I didn\u2019t know a thing about that. You think I needed him gone to gain something? That\u2019s a stretch."
-        ]
+        "A": ["I tested the case glass earlier.", "I stepped back when power cut.", "Only my phone."],
+        "B": ["Yes, I recorded a few seconds.", "Yes, I stepped into study.", "I restored panels once."],
+        "C": ["No, sheath wasn’t mine.", "Yes, I wore gloves.", "I didn’t handle dagger directly."],
+        "D": ["I know how quietly the case opens.", "I’ve used daggers before — martial arts.", "Yes, I entered study briefly."]
       }
     },
     "Suspect 5": {
-      "name": "Celeste Durand",
-      "description": "An art historian who questioned the authenticity of Gregory\u2019s prized painting \u2014 and had much to gain from being proven right.",
+      "name": "",
+      "description":"",
       "answers": {
-        "A": [
-          "I poured Gregory\u2019s wine, yes. I was near the decanter. But he insisted on choosing his own bottle that night. Said it was a 'rare treat'.",
-          "I may have touched one of the glasses, but I didn\u2019t linger. I helped adjust the seating arrangement when Gregory asked for more candles.",
-          "Now that you mention it, I did feel a chill in the Art Vault earlier \u2014 thought it was the old AC acting up again. Didn\u2019t think it was important."
-        ],
-        "B": [
-          "Would you rather I screamed? I\u2019ve seen worse in business. People die, and I don\u2019t fall apart. Doesn\u2019t mean I did anything.",
-          "Gregory could be... difficult. Charismatic, yes, but he barked orders. Some staff adored him, others feared him. It depends who you ask.",
-          "Nervous? Isabelle. Always glancing around, twiddling her necklace. And Omar \u2014 sweat beading like he\u2019d run a marathon."
-        ],
-        "C": [
-          "I stepped out for air. That roast was heavy, and I needed a moment. Alone. Just the balcony and me, I swear.",
-          "Julian. We talked briefly. He was upset \u2014 muttering about 'cutting ties'. I didn\u2019t press.",
-          "The lights flickered just after Celeste asked Gregory about the painting\u2019s origins. Coincidence? Maybe. But the timing was eerie."
-        ],
-        "D": [
-          "Gregory and I had... past dealings. He owed me favors, and I expected a return on my investments. That\u2019s not illegal.",
-          "His death? A door closes, a window opens. But don\u2019t twist that \u2014 I didn\u2019t want him dead. We had more to settle.",
-          "Insurance? No, I didn\u2019t know a thing about that. You think I needed him gone to gain something? That\u2019s a stretch."
-        ]
+        "A": ["I deal in art restoration — cyanide remover.", "I didn’t touch bottles.", "I was alone, reviewing the exhibit."],
+        "B": ["Yes, I’m familiar with removing paint.", "I tuned the bottle setup.", "I stayed in the gallery post-midnight."],
+        "C": ["It’s a restoration solvent.", "Yes, I poured to clean, not poison.", "I left to call my assistant."],
+        "D": ["I wear lavender gloves in studio.", "Yes, that’s mine.", "I was studying the dagger sheath."]
       }
     },
     "Suspect 6": {
-      "name": "Omar Patel",
-      "description": "Gregory\u2019s personal accountant. Rumors swirl that he discovered massive tax fraud in Gregory\u2019s books.",
+      "name": "",
+      "description":"",
       "answers": {
-        "A": [
-          "I poured Gregory\u2019s wine, yes. I was near the decanter. But he insisted on choosing his own bottle that night. Said it was a 'rare treat'.",
-          "I may have touched one of the glasses, but I didn\u2019t linger. I helped adjust the seating arrangement when Gregory asked for more candles.",
-          "Now that you mention it, I did feel a chill in the Art Vault earlier \u2014 thought it was the old AC acting up again. Didn\u2019t think it was important."
-        ],
-        "B": [
-          "Would you rather I screamed? I\u2019ve seen worse in business. People die, and I don\u2019t fall apart. Doesn\u2019t mean I did anything.",
-          "Gregory could be... difficult. Charismatic, yes, but he barked orders. Some staff adored him, others feared him. It depends who you ask.",
-          "Nervous? Isabelle. Always glancing around, twiddling her necklace. And Omar \u2014 sweat beading like he\u2019d run a marathon."
-        ],
-        "C": [
-          "I stepped out for air. That roast was heavy, and I needed a moment. Alone. Just the balcony and me, I swear.",
-          "Julian. We talked briefly. He was upset \u2014 muttering about 'cutting ties'. I didn\u2019t press.",
-          "The lights flickered just after Celeste asked Gregory about the painting\u2019s origins. Coincidence? Maybe. But the timing was eerie."
-        ],
-        "D": [
-          "Gregory and I had... past dealings. He owed me favors, and I expected a return on my investments. That\u2019s not illegal.",
-          "His death? A door closes, a window opens. But don\u2019t twist that \u2014 I didn\u2019t want him dead. We had more to settle.",
-          "Insurance? No, I didn\u2019t know a thing about that. You think I needed him gone to gain something? That\u2019s a stretch."
-        ]
+        "A": ["I stepped out to take an urgent call.", "Just cleaning my glasses.", "Garden was air."],
+        "B": ["Yes — I heard the scream near corridor.", "I was with Suspect 3 outside.", "No I went back inside after noise."],
+        "C": ["I dropped gloves outside.", "Yes, I felt cold.", "Yes, via study to exit."],
+        "D": ["No, I didn’t wear scented gloves.", "No fingerprint there.", "I opened the case to inspect glass."]
       }
     },
     "Suspect 7": {
-      "name": "Julian Rios",
-      "description": "A mysterious European investor who had recently backed Gregory\u2019s gallery \u2014 and suddenly pulled funding days before the gala.",
+      "name": "Ayush",
+      "description":"Former business partner of the victim",
       "answers": {
-        "A": [
-          "I poured Gregory\u2019s wine, yes. I was near the decanter. But he insisted on choosing his own bottle that night. Said it was a 'rare treat'.",
-          "I may have touched one of the glasses, but I didn\u2019t linger. I helped adjust the seating arrangement when Gregory asked for more candles.",
-          "Now that you mention it, I did feel a chill in the Art Vault earlier \u2014 thought it was the old AC acting up again. Didn\u2019t think it was important."
-        ],
-        "B": [
-          "Would you rather I screamed? I\u2019ve seen worse in business. People die, and I don\u2019t fall apart. Doesn\u2019t mean I did anything.",
-          "Gregory could be... difficult. Charismatic, yes, but he barked orders. Some staff adored him, others feared him. It depends who you ask.",
-          "Nervous? Isabelle. Always glancing around, twiddling her necklace. And Omar \u2014 sweat beading like he\u2019d run a marathon."
-        ],
-        "C": [
-          "I stepped out for air. That roast was heavy, and I needed a moment. Alone. Just the balcony and me, I swear.",
-          "Julian. We talked briefly. He was upset \u2014 muttering about 'cutting ties'. I didn\u2019t press.",
-          "The lights flickered just after Celeste asked Gregory about the painting\u2019s origins. Coincidence? Maybe. But the timing was eerie."
-        ],
-        "D": [
-          "Gregory and I had... past dealings. He owed me favors, and I expected a return on my investments. That\u2019s not illegal.",
-          "His death? A door closes, a window opens. But don\u2019t twist that \u2014 I didn\u2019t want him dead. We had more to settle.",
-          "Insurance? No, I didn\u2019t know a thing about that. You think I needed him gone to gain something? That\u2019s a stretch."
-        ]
+        "A": ["Gloves are muddy by garden.", "Yes, I tinker occasionally.", "I did hear a crashing echo."],
+        "B": ["I noticed Suspect 5 acting oddly.", "I was checking ceiling wiring.", "Yes saw Suspect 8 near corner."],
+        "C": ["Victim confided secrets, yes.", "They blackmailed me, I feared it.", "I paused by the gate."],
+        "D": ["Suspect 4 rushed past there.", "I heard footsteps.", "I was near stairs at 12:17."]
       }
     },
     "Suspect 8": {
-      "name": "Mira Lang",
-      "description": "A former lover of Gregory\u2019s, re-invited to the estate after years of silence. Her reasons for returning remain unclear.",
+      "name": "",
+      "description":"",
       "answers": {
-        "A": [
-          "I poured Gregory\u2019s wine, yes. I was near the decanter. But he insisted on choosing his own bottle that night. Said it was a 'rare treat'.",
-          "I may have touched one of the glasses, but I didn\u2019t linger. I helped adjust the seating arrangement when Gregory asked for more candles.",
-          "Now that you mention it, I did feel a chill in the Art Vault earlier \u2014 thought it was the old AC acting up again. Didn\u2019t think it was important."
-        ],
-        "B": [
-          "Would you rather I screamed? I\u2019ve seen worse in business. People die, and I don\u2019t fall apart. Doesn\u2019t mean I did anything.",
-          "Gregory could be... difficult. Charismatic, yes, but he barked orders. Some staff adored him, others feared him. It depends who you ask.",
-          "Nervous? Isabelle. Always glancing around, twiddling her necklace. And Omar \u2014 sweat beading like he\u2019d run a marathon."
-        ],
-        "C": [
-          "I stepped out for air. That roast was heavy, and I needed a moment. Alone. Just the balcony and me, I swear.",
-          "Julian. We talked briefly. He was upset \u2014 muttering about 'cutting ties'. I didn\u2019t press.",
-          "The lights flickered just after Celeste asked Gregory about the painting\u2019s origins. Coincidence? Maybe. But the timing was eerie."
-        ],
-        "D": [
-          "Gregory and I had... past dealings. He owed me favors, and I expected a return on my investments. That\u2019s not illegal.",
-          "His death? A door closes, a window opens. But don\u2019t twist that \u2014 I didn\u2019t want him dead. We had more to settle.",
-          "Insurance? No, I didn\u2019t know a thing about that. You think I needed him gone to gain something? That\u2019s a stretch."
-        ]
+        "A": ["I’m distant from events.", "Yes, I was tense.", "I didn’t see much."],
+        "B": ["I panicked when lights went out.", "Someone stumbled — I got scared.", "Yes — I feared it was dangerous."],
+        "C": ["I got the note but didn’t open it.", "I was shocked into silence.", "Yes briefly near Suspect 7."],
+        "D": ["That note asked for forgiveness.", "It was wrapped tightly.", "I don’t know thieves."]
       }
     }
   },
+
   "options": {
-    "weapons": [
-      "Poisoned wine",
-      "Antique sword",
-      "Fireplace poker",
-      "Strangled with silk scarf",
-      "Pushed from balcony"
-    ],
-    "locations": [
-      "Observatory",
-      "Wine Cellar",
-      "Dining Hall",
-      "Art Vault",
-      "Private Balcony"
-    ]
-  },
+  "weapons": [
+    "Cyanide (disguised as restoration solvent)",
+    "Knife",
+    "Gun",
+    "Strangulation",
+    "Blunt Force"
+  ],
+  "locations": [
+    "Grand Gallery (just beneath the dagger casing)",
+    "Library",
+    "Kitchen",
+    "Garden",
+    "Study"
+  ]
+},
+
+"specialties": {
+  "A": "Specializes in forensic evidence",
+  "B": "Expert in behavioral analysis",
+  "C": "Skilled in witness interviews",
+  "D": "Specializes in motive analysis"
+},
+
+
   "solution": {
-    "culprit": "Suspect 6",
-    "weapon": "Poisoned wine",
-    "place": "Dining Hall",
-    "explanation": "Omar Patel, Gregory's personal accountant, discovered a series of forged insurance documents and financial fraud tied to Gregory\u2019s estate. He feared being implicated or silenced, and knew Gregory had invited Celeste to authenticate the painting \u2014 which would expose the fake provenance tied to the fraud.\n\nOmar administered a fast-acting poison into Gregory\u2019s personal wine bottle, knowing he\u2019d select it for a toast that evening. The traces of cyanide and Omar\u2019s suspicious behavior when asked about toxicology were key.\n\nThough other suspects had motives \u2014 Isabelle\u2019s humiliation, Victor\u2019s inheritance, Celeste\u2019s dispute \u2014 only Omar had the means, opportunity, and a calculated motive that tied into both the financial and physical evidence. The fingerprint on the cork and his panicked inquiry about chemical traces confirmed his guilt. His emotional state, while visibly shaken, masked deep fear and urgency rather than grief."
+    "culprit": "Suspect 5",
+    "weapon": "Cyanide (disguised as restoration solvent)",
+    "place": "Grand Gallery (just beneath the dagger casing)",
+    "explanation": "Suspect 5, an art restoration expert, intentionally disabled the gallery lighting using a rare solvent circuit breaker trick (causing 37‑sec blackout), swapped the dagger using the eerily similar restoration solvent container, and slipped the dagger sheath into their coat. The blue ink was residue from their solvent pen. They intended to poison Mr. Hawthorne with cyanide but panicked, causing the dagger theft instead. Every clue — ink stains, lavender glove scent, hourglass, mud, sheath — connects to Suspect 5’s profession and actions."
   }
+
 }
